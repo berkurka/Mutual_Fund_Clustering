@@ -1,19 +1,17 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Estimating Neighborhood Affluence With Yelp Data
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Mutual Fund Clustering
 
-## Project Authors
+## Project Author
 - Bernard Kurka | <u>[LinkedIn](https://www.linkedin.com/in/bernardkurka)</u> | <u>[Email](bkexcel2014@gmail.com)</u>
-- Thomas Ludlow | <u>[LinkedIn](https://www.linkedin.com/in/thomas-w-ludlow-jr-4568a1b)</u> | <u>[Email](tludlow@gmail.com)</u>
-- Brittany Allen | <u>[LinkedIn](https://www.linkedin.com/in/brittlallen)</u> | <u>[Email](thebrittallen@gmail.com)</u>
 
-## Presentation Slides
-- https://docs.google.com/presentation/d/1a9jGkPlWrMeTOaTl-t5zsYTpBsu5WPCP6Zb0eF-3wws/edit?usp=sharing
-- NLT Project_ Estimating Neighborhood Affluence with Yelp Data — Bernard K, Thomas L, Brittany A.pdf
+
+## [Presentation Slides](https://docs.google.com/presentation/d/1a9jGkPlWrMeTOaTl-t5zsYTpBsu5WPCP6Zb0eF-3wws/edit?usp=sharing)
 
 
 ## Notebooks
-- <u>[01 Data Collection](link)</u>
-- <u>[02 Data Cleaning & Exploration](link)</u>
-- <u>[03 Data Modeling](link)</u>
+- <u>[01 Data Cleaning](https://github.com/berkurka/Mutual_Fund_Clustering/blob/master/Notebooks/Data%20Cleaning.ipynb)</u>
+- <u>[02 Data Exploration](https://github.com/berkurka/Mutual_Fund_Clustering/blob/master/Notebooks/EDA.ipynb)</u>
+- <u>[03 Data Modeling](https://github.com/berkurka/Mutual_Fund_Clustering/blob/master/Notebooks/Building%20Models.ipynb)</u>
+- <u>[04 Interactive Demo](https://github.com/berkurka/Mutual_Fund_Clustering/blob/master/Notebooks/Interactive_display_demo.ipynb)</u>
 
 ## Table of contents
 - <u>[Executive Summary](#header)</u>
@@ -22,18 +20,24 @@
 - <u>[Conclusion](#header)</u>
 
 ### Executive Summary
-[New Light Technologies (NLT)](https://www.linkedin.com/company/new-light-technologies) requested an economic analysis utilizing Yelp cost estimates ($, $$, $$$, $$$$) to estimate neighborhood affluence. In thinking about conventional sources of economic data like the U.S. Census Bureau or the IRS two major flaws we can identify are the reporting-lags in acquiring this data and the ability to slice and dice the data in varied ways. How can we develop a tool leveraging more agile data sources (like Yelp) that will help us measure local economic activity?
+In 2017 the number of [open-end funds](https://www.investopedia.com/ask/answers/042315/what-are-primary-differences-between-closed-end-investment-and-open-end-investment.asp) worldwide reached [114,131](https://www.statista.com/topics/1441/mutual-funds/). Choosing a mutual fund can be overwhelming, since  there are thousands of choices and many ways to compare, in the United States there where [9,356 mutual funds in 2017](https://www.statista.com/topics/1441/mutual-funds/). The goal of this project is to use unsupervised machine learning clustering algorithms to leverage and simplify fund selection.
 
-Our initial approach was to build a supervised learning, linear regression model, but we found that defining a proper affluence metric by using IRS zipcode-level AGI (adjusted gross income) was difficult to do. While traditional methods typically estimate wealth of a locality based on demographic characteristics like income, the novelty of our latter approach — conducting an unsupervised learning analysis with clustering algorithms — is in its use of big data related to commercial activity and cost of product and services as an indicator of affluency.
+I started the project using a database with 4,082 open-end Brazilian mutual funds destinated to Non-Institutional investors. I removed funds that where terminated or where recently created (last 24 months), the number went down to 1,300 funds.
+
+I selected 42 features to fit in unsupervised clustering algorithms. Nearly half of the features are related to the fund qualitative characteristics such as classification, benchmark, management fee and so on. The other features are related to funds quantitative indicators such as fund assets under management, return, volatility and so forth.
 
 
-Counting the number of business in each price range ($, $$, $$$, $$$$) in Yelp´s result page, we where able to use K Means Model create 4 distinct clusters.
- - $ cluster: Limited activity across all price ranges ($, $$, $$$, $$$$)
- - $$ cluster: Moderate activity in $ and $$. Limited activity in $$$ and $$$$.
- - $$$ cluster: Highest activity in $$. Increased activity in $$$ and $$$$
- - $$$$ cluster: Highest activity in $$$ and $$$$. High activity in $$.
+I ran 4 different clustering models (Kmeans, Dbscan, Hierarchy and Agglomerative) using several hyperparameters combinations, analized the Inertia, Silhouette and cluster count distribution. The highest Silhouette scores models were ocorring with a lower number of centroids (k), and a highly concentrated cluster count, that means that a most of the observations have similar feature values hand full of funds with very different feature values.
 
- 
+I chose the xx model
+
+ Model create X distinct clusters.
+ - cluster 1: Limite
+ - cluster 2: Moder
+ - cluster 3: Hig
+ - cluster 4: Highest .
+
+
 We developed a Python Class that given a list of NYC Zipcodes or neighborhood names will access the API gather data for these neighborhoods and use a KNN model to predict wich cluster it belongs. The Class also has plot functions to compare the given Zipcodes with the 4 static clusters and there is also a option to print results in NYC map.
 
 ### The Data
@@ -54,9 +58,9 @@ We developed a Python Class that given a list of NYC Zipcodes or neighborhood na
 - [Notebook 04 - API Pull for Training Data](https://github.com/twludlow/ga_project_4/blob/master/notebooks/04%20-%20API%20Pull%20for%20Training%20Data.ipynb)
 - Our data was acquired via Yelp's Fusion API `from yelpapi import YelpAPI`.We set our Yelp Fusion API Key and established an API connection. From there we stored the data we gathered into a `Pandas` DataFrame.
 - The search criterias included all Yelp´s categories (shops, restaurants ..), filtered by Yelp´s "best mach" option.
-- We gathered top 100 business prices and reviews from 278 NYC zipcodes. 
+- We gathered top 100 business prices and reviews from 278 NYC zipcodes.
 
- 
+
 
 
 ### Analysis
@@ -65,11 +69,11 @@ We developed a Python Class that given a list of NYC Zipcodes or neighborhood na
 - intro sentence about our software requirements (e.g., `Pandas`, `Scikit-learn`)
 - Used a Grid search through 3 different clustering models (K Means, Agglomerative and Hierarchical) and changing hiper parameters (n_clusters, inits, linkage_method, affinity...).
 - Analizing Silhouette Score, Inertia Score and number of observations in each cluster, K Means yielded best results.
-- Using the Elbow method n_clusters = 4 was found to be a good balanced choice. 
+- Using the Elbow method n_clusters = 4 was found to be a good balanced choice.
 - Final K means model used the default parameters except for init='random' and random_state=42.
 - Using these models, we developed a class for use by our client: yelpaffluence_nyc.py class YelpAffluence_NYC
  - Methods for YelpAffluence_NYC object include tools to fit the model to NYC data, query Yelp API for list of locations, plot results in a bar graph by price level and plot results on NYC map.
-  
+
 
 ### Conclusion
 - [Notebook 01 - Yelp Affluence Demo](https://github.com/twludlow/ga_project_4/blob/master/notebooks/01%20-%20Yelp%20Affluence%20Demo%20190118.ipynb)
@@ -80,19 +84,19 @@ We noted that locations in each group shared distinct characteristics, and that 
 
 - \$ - Red
  - Limited economic activity across all price ranges (\$ - \$\$\$\$)
- 
+
 - \$\$ - Orange
  - Moderate economic activity in the \$ and \$\$ price levels
  - Limited activity in the \$\$\$ and \$\$\$\$ price categories
- 
+
 - \$\$\$ - Green
  - Highest activity in \$\$ price level
  - Increased activity in \$\$\$ and \$\$\$\$, but not highest
- 
+
 - \$\$\$\$ - Blue
  - Highest activity of all locations in \$\$\$ and \$\$\$\$ price establishments
  - High activity in \$\$ category
- 
+
 These trends are confirmed with inspection of the mean distribution of top-100 establishment price levels for each Yelp Affluence level.
 
 ##### Recommendations
@@ -105,7 +109,7 @@ These trends are confirmed with inspection of the mean distribution of top-100 e
 - Beware of ZIP query results
  - Yelp returned out of state results for some NYC-based zipcodes
  - e.g. 10015 returned results in Tucson, AZ
- 
+
 - Gathering and testing more data
  - Beyond the top 100, best match results
 
@@ -115,5 +119,3 @@ These trends are confirmed with inspection of the mean distribution of top-100 e
 
 - Scaling the model
  - Train on other large metropolitan areas and check consistency of results
-
-
