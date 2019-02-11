@@ -123,14 +123,14 @@ To get a good balance between interpretability and clustering scores I selected 
 - <u>[Notebook 02 Data Exploration](https://github.com/berkurka/Mutual_Fund_Clustering/blob/master/Notebooks/EDA.ipynb)</u>
 - <u>[Notebook 03 Data Modeling](https://github.com/berkurka/Mutual_Fund_Clustering/blob/master/Notebooks/Building%20Models.ipynb)</u>
 - The libraries used for modeling (e.g., `Pandas`,`numpy`, `Scikit-learn`)
-- Used a Grid search through 4 different clustering models (K Means, Dbscan Agglomerative and Hierarchical) and changing hiper parameters (n_clusters, inits, linkage_method, affinity...).
+- I used a Grid search through 4 different clustering models (K Means, Dbscan Agglomerative and Hierarchical) and changing hiper parameters (n_clusters, inits, linkage_method, affinity...).
 - Analyzing  Silhouette Score, Inertia Score and number of observations in each cluster, K Means yielded the best results.
-- Using the Elbow method to pick k indicates a high score variation depending on the number of clusters in the mode. In order to make interpretability more comprehensible, I found that 5 clusters was a well balanced choice.
+- I Used the Elbow method to pick k indicates a high score variation depending on the number of clusters in the mode. In order to make interpretability more comprehensible, I found that 5 clusters was a well balanced choice.
 - Final K means model used the default parameters except for `init = random` and `random_state=42`.
 - Using the optimal model, I created a prediction column with the predicted cluster.
  - In order to facilitate model interpretability I used a `RandomForestClassifier` model to predict which cluster a row should be assigned to. The model had xxxx scores. The model´s most relevant coefficients where used to find build a table with different characteristics of each cluster.
 
-#### Insert table
+#### Most Important coefficients used in cluster classification
 |Feature name|Random Forest Coefficient|
 |---|---|
 |CVM Category_Fixed Income|0.296|
