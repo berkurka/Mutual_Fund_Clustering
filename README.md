@@ -140,7 +140,8 @@ Final K-means model used the default parameters except for `init = random` and `
 - Using the optimal model, I created a prediction column with the predicted cluster.
  - In order to facilitate model interpretability I used a `RandomForestClassifier` model to predict which cluster an observation should be assigned to. The Random Forest accuracy score was 99%, 98% and 98% in training, cross-validation and testing data respectively. The model´s most relevant coefficients were used to build a table with different characteristics of each cluster.
 
-#### Most Important coefficients used predicting cluster classification
+Most Important coefficients for predicting cluster
+
 |Feature name|Random Forest Coefficient|
 |---|---|
 |CVM Category_Fixed Income|0.296|
@@ -160,7 +161,7 @@ The most important feature used in K-means clustering was the fund's category. V
 
 Several fund recommender systems use fund category and volatility, as the backbones of their decision process, the project results are similar then the industry practice.  
 
-##### Recommendations
+### Recommendations
 1. Build a fund recommender system using cluster classifications
   - The system will receive as input information about risk, fund category, minimum amount invested and redemption delay.
 2. To improve the recommender system
