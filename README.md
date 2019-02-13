@@ -6,6 +6,8 @@
 
 ## [Presentation Slides](https://docs.google.com/presentation/d/1fzJ11Je7FM09U-_RrLRmNs7IHrcWNF0Ny9ZS_LW_qIg/edit?usp=sharing)
 
+## Finantial concepts used in project:
+- Some terms used in the project are specific to finance this file will provide some useful explanation. <u>[Finance concepts explained]()</u>
 
 ## Notebooks
 - <u>[01 Data Cleaning](https://github.com/berkurka/Mutual_Fund_Clustering/blob/master/Notebooks/Data%20Cleaning.ipynb)</u>
