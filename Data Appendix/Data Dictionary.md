@@ -1,19 +1,7 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Data Dictionary
 
-## [Back to Project GitHub](https://github.com/berkurka/Mutual_Fund_Clustering)
+To get a better understanding of labee names it is recommended to read the [Finance Key Concepts file.](https://github.com/berkurka/Mutual_Fund_Clustering/blob/master/Data%20Appendix/Finance%20Key%20Concepts.md)
 
-##### Brazilian mutual fund terms Dictionary:
-
-|Name|Type|Description|
-|---|---|---|
-|CDI or CDI_Opening|Benchmark / Index |Brazilian risk-free index, similar to U.S. fed fund rate.|
-|Ibovespa|Benckmark / Index|Brazilian most important stock index.|
-|IBX|Benckmark / Index| Index of Brazil's 100 most traded stocks|
-|IMA-B|Benckmark / Index| Index of Brazilian government federal inflation bonds, the index managed by a Anbima|
-|CVM|Entity| Brazilian Securities and Exchange Commission. Responsible  for regulation and also classifies mutual fund types|
-|National Association of Investment Banks (**Anbima**)|Entity| Created several important Brazilian benchmarks. Also labels mutual funds based on metrics such as *LeveragedAnbima* and *PrivateCreditAnbima*|
-
-##### Data Dictionary
 
 |Label|Type|Description|
 |---|---|---|

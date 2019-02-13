@@ -1,7 +1,5 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Finance Concepts
 
-## [Link to GitHub Project](https://github.com/berkurka/Mutual_Fund_Clustering)
-
 ## What are mutual funds
 
 You can think of a mutual fund as a company that brings together a large group of people and invests their money on their behalf in a portfolio. [Read more](https://en.wikipedia.org/wiki/Mutual_fund)
@@ -24,3 +22,14 @@ You can think of a mutual fund as a company that brings together a large group o
 - Balanced fund: Invests in stocks and bonds (Aka hybrid funds).
 - Fixed income fund: Invests in bonds.
 - Currency fund: Invest in foreign currencies.
+
+## Brazilian mutual fund keywords:
+
+|Name|Type|Description|
+|---|---|---|
+|CDI or CDI_Opening|Benchmark / Index |Brazilian risk-free index, similar to U.S. fed fund rate.|
+|Ibovespa|Benckmark / Index|Brazilian most important stock index.|
+|IBX|Benckmark / Index| Index of Brazil's 100 most traded stocks|
+|IMA-B|Benckmark / Index| Index of Brazilian government federal inflation bonds, the index managed by a Anbima|
+|CVM|Entity| Brazilian Securities and Exchange Commission. Responsible  for regulation and also classifies mutual fund types|
+|National Association of Investment Banks (**Anbima**)|Entity| Created several important Brazilian benchmarks. Also labels mutual funds based on metrics such as *LeveragedAnbima* and *PrivateCreditAnbima*|
