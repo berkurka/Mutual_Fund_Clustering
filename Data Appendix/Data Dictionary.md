@@ -1,6 +1,6 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Data Dictionary
 
-To get a better understanding of labee names it is recommended to read the [Finance Key Concepts file.](https://github.com/berkurka/Mutual_Fund_Clustering/blob/master/Data%20Appendix/Finance%20Key%20Concepts.md)
+To get a better understanding of the label names I recommend reading the [Finance Key Concepts file.](https://github.com/berkurka/Mutual_Fund_Clustering/blob/master/Data%20Appendix/Finance%20Key%20Concepts.md)
 
 
 |Label|Type|Description|
