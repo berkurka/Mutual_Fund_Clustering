@@ -10,10 +10,10 @@
 - Some terms used in the project are specific to finance this file will provide some useful explanation. <u>[Concepts explained]()</u>
 
 ## Notebooks
-- <u>[01 Data Cleaning](https://github.com/berkurka/Mutual_Fund_Clustering/blob/master/Notebooks/Data%20Cleaning.ipynb)</u>
-- <u>[02 Data Exploration](https://github.com/berkurka/Mutual_Fund_Clustering/blob/master/Notebooks/EDA.ipynb)</u>
-- <u>[03 Data Modeling](https://github.com/berkurka/Mutual_Fund_Clustering/blob/master/Notebooks/Building%20Models.ipynb)</u>
-- <u>[04 Interactive Demo](https://github.com/berkurka/Mutual_Fund_Clustering/blob/master/Notebooks/Interactive_display_demo.ipynb)</u>
+- <u>[01 Data Cleaning](https://github.com/berkurka/Mutual_Fund_Clustering/blob/master/Notebooks/01%20Data%20Cleaning.ipynb)</u>
+- <u>[02 Data Exploration](https://github.com/berkurka/Mutual_Fund_Clustering/blob/master/Notebooks/02%20EDA%20and%20Scaling%20Data.ipynb)</u>
+- <u>[03 Data Modeling](https://github.com/berkurka/Mutual_Fund_Clustering/blob/master/Notebooks/03%20Building%20Models.ipynb)</u>
+- <u>[04 Interactive Demo](https://github.com/berkurka/Mutual_Fund_Clustering/blob/master/Notebooks/04%20Interactive_display_demo.ipynb)</u>
 
 ## Table of contents
 - <u>[Executive Summary](#header)</u>
